@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public AudioListener listener;
+    public AudioSource sound1;
 
     // Start is called before the first frame update
     void Start()
