@@ -7,6 +7,7 @@ public class SpawnScript : MonoBehaviour
     public GameObject primary;
     private CamControl camscript;
     float randomizer;
+    float roadstate = 1;
     Transform spawnlocation;
     // Start is called before the first frame update
     void Start()
@@ -18,20 +19,38 @@ public class SpawnScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // randomizer = Random.Range(0, 1); // This will always generate 0
         spawnlocation = gameObject.transform;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
+        // randomizer = Random.Range(0, 15); // This will randomly decide when the road changes between lanes
+        randomizer = Random.Range(0, 15);
         Debug.Log("Triggered");
-        randomizer = Random.Range(0, 2);
-        if (randomizer == 0)
+        if (randomizer == 5 && roadstate == 1)
         {
-            Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y + 18, 0), transform.rotation);
+            roadstate = 2;
         }
-        if (randomizer == 1)
+        if (roadstate == 2)
         {
-            Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y + 18, 0), transform.rotation);
+            Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
+            roadstate = 3;
+        }
+        if (roadstate == 3)
+        {
+            Object.Instantiate(camscript.Back3, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
+        }
+        if (randomizer == 5 && roadstate == 3)
+        {
+            roadstate = 4;
+        }
+        if(roadstate == 4)
+        {
+            Object.Instantiate(camscript.Back4, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
+            roadstate = 1;
+        }
+        else
+        {
+            Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
         }
     }
 }

@@ -7,8 +7,9 @@ public class CamControl : MonoBehaviour
 {
     public GameObject Back1;
     public GameObject Back2;
+    public GameObject Back3;
+    public GameObject Back4;
     public float ms;
-    float randomizer;
 
     public bool didstart = true;
 
