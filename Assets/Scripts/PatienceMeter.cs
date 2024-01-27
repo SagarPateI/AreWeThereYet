@@ -14,7 +14,6 @@ public class PatienceMeter : MonoBehaviour
     private float currentPatience;
     public GameObject scoreManager;
 
-
     void Start()
     {
         currentPatience = startingPatience;
