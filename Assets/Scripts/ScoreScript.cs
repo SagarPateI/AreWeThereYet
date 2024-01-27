@@ -26,7 +26,7 @@ public class ScoreScript : MonoBehaviour
         Debug.Log(score);
     }
 
-    void SaveScore()
+    public void SaveScore()
     {
         using (StreamWriter sw = new StreamWriter(Application.dataPath + "/BabysitterList.txt", true))
         {
