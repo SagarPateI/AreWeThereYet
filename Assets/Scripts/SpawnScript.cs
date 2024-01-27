@@ -24,9 +24,9 @@ public class SpawnScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // randomizer = Random.Range(0, 15); // This will randomly decide when the road changes between lanes
-        randomizer = Random.Range(0, 15);
+        randomizer = Random.Range(0, 5);
         Debug.Log("Triggered");
-        if (randomizer == 5 && roadstate == 1)
+        if (randomizer == 3 && roadstate == 1)
         {
             roadstate = 2;
         }
@@ -35,11 +35,11 @@ public class SpawnScript : MonoBehaviour
             Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
             roadstate = 3;
         }
-        if (roadstate == 3)
+        else if (roadstate == 3)
         {
             Object.Instantiate(camscript.Back3, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
         }
-        if (randomizer == 5 && roadstate == 3)
+        else if (randomizer == 3 && roadstate == 3)
         {
             roadstate = 4;
         }
