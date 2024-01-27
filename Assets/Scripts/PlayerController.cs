@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float speed = 1;
     float rightleft = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow)) rightleft += -1 * speed;
-        if (Input.GetKey(KeyCode.RightArrow)) rightleft += 1 * speed;
-        rightleft *= Time.deltaTime;
-        transform.Translate(rightleft, 0, 0);
+        if (Input.GetKey(KeyCode.LeftArrow)) rightleft = -speed;
+        else if (Input.GetKey(KeyCode.RightArrow)) rightleft = speed;
+        else rightleft = 0;
+        transform.Translate(rightleft * Time.deltaTime, 0, 0);
     }
 }

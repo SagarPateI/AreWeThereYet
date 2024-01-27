@@ -18,7 +18,8 @@ public class SpawnScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        randomizer = Random.Range(0, 1);
+        // randomizer = Random.Range(0, 1); // This will always generate 0
+        randomizer = Random.Range(0, 2);
         spawnlocation = gameObject.transform;
     }
     void OnTriggerEnter(Collider other)
@@ -28,7 +29,7 @@ public class SpawnScript : MonoBehaviour
         {
             Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y, 0), transform.rotation);
         }
-        if (randomizer == 0)
+        if (randomizer == 1)
         {
             Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y, 0), transform.rotation);
         }
