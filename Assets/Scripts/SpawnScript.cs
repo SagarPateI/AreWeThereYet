@@ -26,11 +26,11 @@ public class SpawnScript : MonoBehaviour
         Debug.Log("Triggered");
         if(randomizer == 0)
         {
-            Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y, 0), transform.rotation);
+            Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y + 18, 0), transform.rotation);
         }
-        if (randomizer == 0)
+        if (randomizer == 1)
         {
-            Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y, 0), transform.rotation);
+            Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y + 18, 0), transform.rotation);
         }
     }
 }

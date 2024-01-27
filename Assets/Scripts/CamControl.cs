@@ -10,7 +10,7 @@ public class CamControl : MonoBehaviour
     public float ms;
     float randomizer;
 
-    private bool didstart = true;
+    public bool didstart = true;
 
     private float size;
     // Start is called before the first frame update
