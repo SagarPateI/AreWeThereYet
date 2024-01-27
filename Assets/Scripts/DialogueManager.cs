@@ -8,7 +8,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueParent;
-    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Button option1Button;
     [SerializeField] private Button option2Button;
 
@@ -55,9 +55,12 @@ public class DialogueManager : MonoBehaviour
             dialogueString line = dialogueList[currentDialogueIndex];
 
             line.startDialogueEvent?.Invoke();
+            //AudioManager.instance.Play("Dialog");
 
             if (line.isQuestion)
             {
+                yield return StartCoroutine(TypeText(line.text));
+
                 option1Button.interactable = true;
                 option2Button.interactable = true;
 
@@ -69,15 +72,13 @@ public class DialogueManager : MonoBehaviour
 
                 yield return new WaitUntil(() => optionSelected);
             }
-
             else
             {
                 yield return StartCoroutine(TypeText(line.text));
             }
 
-            line.endDialogueEvent?.Invoke();
-
-            optionSelected = false;
+            line.startDialogueEvent?.Invoke();
+            optionSelected = true;
         }
 
         DialogueStop();
