@@ -28,29 +28,21 @@ public class SpawnScript : MonoBehaviour
         Debug.Log("Triggered");
         if (randomizer == 3 && roadstate == 1)
         {
+            Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y + 41, 0), transform.rotation);
             roadstate = 2;
         }
-        if (roadstate == 2)
+        else if (roadstate == 2)
         {
-            Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
-            roadstate = 3;
+            Object.Instantiate(camscript.Back3, new Vector3(0, spawnlocation.position.y + 41, 0), transform.rotation);
         }
-        else if (roadstate == 3)
+        else if (randomizer == 3 && roadstate == 2)
         {
-            Object.Instantiate(camscript.Back3, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
-        }
-        else if (randomizer == 3 && roadstate == 3)
-        {
-            roadstate = 4;
-        }
-        if(roadstate == 4)
-        {
-            Object.Instantiate(camscript.Back4, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
+            Object.Instantiate(camscript.Back4, new Vector3(0, spawnlocation.position.y + 41, 0), transform.rotation);
             roadstate = 1;
         }
         else
         {
-            Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
+            Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y + 41, 0), transform.rotation);
         }
     }
 }
