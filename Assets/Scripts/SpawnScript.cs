@@ -21,7 +21,7 @@ public class SpawnScript : MonoBehaviour
         // randomizer = Random.Range(0, 1); // This will always generate 0
         spawnlocation = gameObject.transform;
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("Triggered");
         randomizer = Random.Range(0, 2);
