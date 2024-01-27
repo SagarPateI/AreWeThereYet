@@ -29,8 +29,8 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueParent.SetActive(true);
 
-        dialogueList = textToPrint;
         currentDialogueIndex = 0;
+        dialogueList = textToPrint;
 
         DisableButtons();
 
