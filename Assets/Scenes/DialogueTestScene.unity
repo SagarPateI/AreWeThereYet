@@ -467,6 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a737fdc83f7a69f41bd758259a859658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomNum: 0
   dialogueStrings:
   - text: blablabla?
     isEnd: 0
