@@ -31,7 +31,7 @@ public class BabySitterLister : MonoBehaviour
             using (StreamWriter sw = new StreamWriter(Application.dataPath + "/BabysitterList.txt", true))
             {
 
-                sw.WriteLine(sitterName);
+                sw.Write(sitterName);
                 sw.Close();
             }
         }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class PatienceMeter : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PatienceMeter : MonoBehaviour
     // the UI slider representing patience meter
     public Slider patienceSlider; 
     private float currentPatience;
+    public GameObject scoreManager;
+
 
     void Start()
     {
@@ -39,8 +42,22 @@ public class PatienceMeter : MonoBehaviour
     {
         if (currentPatience <= 0)
         {
+            scoreManager.GetComponent<ScoreScript>().SaveScore();
             switchPlayerScreen.SetActive(true);
             // PAUSE THE GAME HERE AS WELL
+        }
+    }
+
+    //Used for Score. Returns True/False depending on if patience is 0 or not
+    public bool isPatienceZero()
+    {
+        if(currentPatience <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
