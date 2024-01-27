@@ -8,11 +8,14 @@ public class DialogueTrigger : MonoBehaviour
 
     public WaitForSeconds waitTime = new WaitForSeconds(1f);
     private int timer = 3;
+    private int randomNum;
     [SerializeField] private List<dialogueString> dialogueStrings = new List<dialogueString>();
+    [SerializeField] private List<dialogueString> dialogueStrings2 = new List<dialogueString>();
 
     void Start()
     {
         StartCoroutine(Countdown());
+        randomNum = Random.Range(1, 2);
     }
 
     IEnumerator Countdown()
@@ -23,8 +26,16 @@ public class DialogueTrigger : MonoBehaviour
             timer--;
         }
 
-        gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
 
+        if (randomNum == 1)
+        {
+            gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings);
+        }
+
+        else
+        {
+            gameObject.GetComponent<DialogueManager>().DialogueStart(dialogueStrings2);
+        }
 
     }
 }
