@@ -269,6 +269,7 @@ MonoBehaviour:
   Back2: {fileID: 2205172503352432549, guid: 4cc6003e3771a5a4688065d61cd5842a, type: 3}
   Back3: {fileID: 2087375895194923579, guid: b1f9a383841880a47aeb83016f28ed6d, type: 3}
   Back4: {fileID: 5074357844917277597, guid: c299380683f5d6844bfe51d437c498a3, type: 3}
+  roadstate: 1
   ms: 5
   didstart: 1
 --- !u!1 &588091531
@@ -466,11 +467,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a882b58919843478e6baf14f06fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPatience: 100
+  startingPatience: 0.5
   hitPenalty: 5
   stfuPenalty: 10
   switchPlayerScreen: {fileID: 0}
   patienceSlider: {fileID: 861042254}
+  scoreManager: {fileID: 0}
 --- !u!114 &861042254
 MonoBehaviour:
   m_ObjectHideFlags: 0
