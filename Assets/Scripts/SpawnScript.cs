@@ -19,13 +19,13 @@ public class SpawnScript : MonoBehaviour
     void FixedUpdate()
     {
         // randomizer = Random.Range(0, 1); // This will always generate 0
-        randomizer = Random.Range(0, 2);
         spawnlocation = gameObject.transform;
     }
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Triggered");
-        if(randomizer == 0)
+        randomizer = Random.Range(0, 2);
+        if (randomizer == 0)
         {
             Object.Instantiate(camscript.Back1, new Vector3(0, spawnlocation.position.y, 0), transform.rotation);
         }
