@@ -13,7 +13,7 @@ public class ChangeScene : MonoBehaviour
 
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("TileTest");
     }
 
     public void LoadStartMenuScene()
