@@ -9,6 +9,7 @@ public class CamControl : MonoBehaviour
     public GameObject Back2;
     public GameObject Back3;
     public GameObject Back4;
+    public float roadstate = 1;
     public float ms;
 
     public bool didstart = true;
