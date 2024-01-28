@@ -37,8 +37,7 @@ public class PatienceMeter : MonoBehaviour
             scoreManager.GetComponent<ScoreScript>().SaveScore();
             distanceMeter.GetComponent<DistanceMeter>().SaveDistance();
             PlayerPrefs.DeleteKey("BabysitterName");
-
-            //SceneManager.LoadScene("EnterNameAgain");
+            SceneManager.LoadScene("EnterNameAgain");
         }
     }
 
