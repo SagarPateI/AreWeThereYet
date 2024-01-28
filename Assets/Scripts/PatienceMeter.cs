@@ -25,7 +25,7 @@ public class PatienceMeter : MonoBehaviour
 
     void Update()
     {
-        targetProgress += increaseRate * Time.deltaTime;
+        targetProgress -= increaseRate * Time.deltaTime;
         targetProgress = Mathf.Clamp(targetProgress, startingPatience, maxPatience);
         slider.value = Mathf.Lerp(slider.value, targetProgress / maxPatience, FillSpeed * Time.deltaTime);
 
@@ -43,18 +43,14 @@ public class PatienceMeter : MonoBehaviour
     public void DecreasePatienceByHit()
     {
         targetProgress -= hitPenalty;
+        UpdatePatienceUI();
     }
 
     // Decrease patience when the babysitter tells the kid to STFU
     public void DecreasePatienceBySTFU()
     {
         targetProgress -= stfuPenalty;
-    }
-
-    // Update the UI slider to reflect current patience value
-    void UpdatePatienceUI()
-    {
-        slider.value = targetProgress / maxPatience;
+        UpdatePatienceUI();
     }
 
     // Used for Score
@@ -69,5 +65,11 @@ public class PatienceMeter : MonoBehaviour
     {
         targetProgress -= wrongAnswerPenalty;
         UpdatePatienceUI();
+    }
+
+    // Update the UI slider to reflect current patience value
+    void UpdatePatienceUI()
+    {
+        slider.value = targetProgress / maxPatience;
     }
 }

@@ -15,7 +15,7 @@ public class CarSpawner : MonoBehaviour
     public Vector3 originpos;
     public Vector3 distbtwnen;
     public int enemiesperspawn;
-    public float spawntime = 1.5f;
+    public float spawntime = 2.5f;
     public float yloc;
     public float xloc;
     public GameObject Camera;
@@ -79,21 +79,21 @@ public class CarSpawner : MonoBehaviour
                 {
                     // randomize spawn location
                     float randomizer = UnityEngine.Random.Range(0f, 25f);
-                    if (randomizer > 10)
-                    {
-                        spawnx = -2.6f;
-                    }
-                    else if (randomizer > 5)
-                    {
-                        spawnx = 2.5f;
-                    }
-                    else if (randomizer > 20)
+                    if (randomizer > 20)
                     {
                         spawnx = -5.1f;
                     }
                     else if (randomizer > 15)
                     {
                         spawnx = 5.1f;
+                    }
+                    else if (randomizer > 10)
+                    {
+                        spawnx = -2.6f;
+                    }
+                    else if (randomizer > 5)
+                    {
+                        spawnx = 2.5f;
                     }
                     else
                     {
@@ -107,7 +107,7 @@ public class CarSpawner : MonoBehaviour
                 }
             }
             Debug.Log("spawned");
-            spawntime = UnityEngine.Random.Range(.7f, 1f);
+            spawntime = UnityEngine.Random.Range(1f, 1.2f);
         }
     }
     public void Spawn()
