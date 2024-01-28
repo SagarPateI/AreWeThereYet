@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5;
-    float rightleft = 0;
-    Rigidbody2D playerRB;
-    // Start is called before the first frame update
+    public float speed = 5f;
+    private Rigidbody2D playerRB;
+
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow)) rightleft = -speed;
-        else if (Input.GetKey(KeyCode.RightArrow)) rightleft = speed;
-        else rightleft = 0;
-        rightleft *= Time.deltaTime;
-        Vector3 pMove = new Vector3(rightleft, 0, 0);
-        playerRB.MovePosition(transform.position + pMove);
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        Vector2 movement = new Vector2(moveHorizontal, 0f).normalized;
+        playerRB.velocity = movement * speed;
     }
 }
