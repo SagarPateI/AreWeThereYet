@@ -17,8 +17,12 @@ public class PatienceMeter : MonoBehaviour
 
     public float targetProgress;
 
+    public GameObject camController;
+    private bool started = false;
+
     void Start()
     {
+        camController = GameObject.Find("Main Camera");
         slider = GetComponent<Slider>();
         targetProgress = maxPatience;
         UpdatePatienceUI();
@@ -26,9 +30,16 @@ public class PatienceMeter : MonoBehaviour
 
     void Update()
     {
-        targetProgress = Mathf.Clamp(targetProgress, startingPatience, maxPatience);
-        targetProgress -= increaseRate * Time.deltaTime;
-        slider.value = Mathf.Lerp(slider.value, targetProgress / maxPatience, FillSpeed * Time.deltaTime);
+        if (camController.GetComponent<CamControl>().didstart)
+        {
+            started = true;
+        }
+        if(started)
+        {
+            targetProgress = Mathf.Clamp(targetProgress, startingPatience, maxPatience);
+            targetProgress -= increaseRate * Time.deltaTime;
+            slider.value = Mathf.Lerp(slider.value, targetProgress / maxPatience, FillSpeed * Time.deltaTime);
+        }
 
         // Check if patience has reached zero
         if (targetProgress <= startingPatience)
