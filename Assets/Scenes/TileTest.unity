@@ -415,32 +415,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listener: {fileID: 0}
   sound1: {fileID: 0}
---- !u!1001 &680429157
+--- !u!1001 &618761550
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1561639425127373367, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
-      propertyPath: m_Size.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1561639425127373367, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
-      propertyPath: m_Size.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1561639425127373367, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 3832644646281543657, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
+      propertyPath: patienceMeter
+      value: 
+      objectReference: {fileID: 861042251}
     - target: {fileID: 6345850668273254648, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
       propertyPath: m_Name
       value: NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345850668273254648, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
-      propertyPath: m_TagString
-      value: Hazard
       objectReference: {fileID: 0}
     - target: {fileID: 6345850668273254651, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
       propertyPath: m_RootOrder
@@ -448,11 +436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6345850668273254651, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.015282929
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6345850668273254651, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.8312929
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6345850668273254651, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
       propertyPath: m_LocalPosition.z
@@ -486,8 +474,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 687694546992476516, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
 --- !u!1 &861042251
 GameObject:

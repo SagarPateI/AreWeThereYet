@@ -80,7 +80,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2.7}
   m_EdgeRadius: 0
 --- !u!212 &2764919251411870510
 SpriteRenderer:
@@ -146,3 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cba3a92ed3612c4592eaa37c1cc27bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patienceMeter: {fileID: 0}
+  speed: 5
