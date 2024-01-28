@@ -524,11 +524,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a882b58919843478e6baf14f06fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPatience: 0.5
+  FillSpeed: 0.5
+  startingPatience: 0.77
   hitPenalty: 5
   stfuPenalty: 10
   switchPlayerScreen: {fileID: 0}
-  patienceSlider: {fileID: 861042254}
   scoreManager: {fileID: 1823165013}
 --- !u!114 &861042254
 MonoBehaviour:
