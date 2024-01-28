@@ -29,7 +29,7 @@ public class ScoreScript : MonoBehaviour
 
         if (started)
         {
-            if (patienceMeter != null && patienceScript.IsPatienceEmpty())
+            if (patienceMeter != null && !patienceScript.IsPatienceEmpty())
             {
                 score++;
                 Debug.Log(score);
