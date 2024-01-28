@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patienceMeter: {fileID: 0}
   speed: 5
+  audioManager: {fileID: 0}
