@@ -6,10 +6,11 @@ public class PatienceMeter : MonoBehaviour
 {
     private Slider slider;
     public float FillSpeed = 0.05f;
-    public float maxPatience = 1f; // Maximum patience level
-    public float startingPatience = 0f; // Starting patience level (empty)
+    public float maxPatience = 1f;
+    public float startingPatience = 0f;
     public float hitPenalty = 0.2f;
     public float stfuPenalty = 0.1f;
+    public float increaseRate = 0.01f; // Rate at which patience increases per second
     public GameObject scoreManager;
     public float wrongAnswerPenalty = 0.5f; // Penalty for selecting the wrong answer
 
@@ -24,20 +25,9 @@ public class PatienceMeter : MonoBehaviour
 
     void Update()
     {
-        // Increase patience over time
         targetProgress += increaseRate * Time.deltaTime;
-
-        // Clamp the target progress within the limits
         targetProgress = Mathf.Clamp(targetProgress, startingPatience, maxPatience);
-
-        // Update the UI accordingly
         slider.value = Mathf.Lerp(slider.value, targetProgress / maxPatience, FillSpeed * Time.deltaTime);
-
-        // Check if patience has reached maximum
-        if (targetProgress >= maxPatience)
-        {
-            // Do something when patience is full
-        }
 
         // Check if patience has reached zero
         if (targetProgress <= startingPatience)
