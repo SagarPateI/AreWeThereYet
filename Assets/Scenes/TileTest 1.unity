@@ -1118,6 +1118,9 @@ MonoBehaviour:
   listener: {fileID: 0}
   carHorn: {fileID: 588091538}
   carScreech: {fileID: 588091537}
+  MainLoop: {fileID: 0}
+  Opening: {fileID: 0}
+  timer: 17
 --- !u!82 &588091536
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1819,6 +1822,7 @@ MonoBehaviour:
   increaseRate: 0.01
   scoreManager: {fileID: 1823165013}
   wrongAnswerPenalty: 0.5
+  targetProgress: 0
 --- !u!1 &940225678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,8 +1858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.1195984, y: 6.7180004}
+  m_SizeDelta: {x: 2.2393, y: -4.4787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &940225680
 MonoBehaviour:
@@ -1879,8 +1883,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
+  m_sharedMaterial: {fileID: -9050517108653397290, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2898,8 +2902,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.1195984, y: 2.2392998}
+  m_SizeDelta: {x: 2.2393, y: -4.4787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712568243
 MonoBehaviour:
@@ -2923,8 +2927,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Button
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
+  m_sharedMaterial: {fileID: -9050517108653397290, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3430,15 +3434,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is where dialogue will appear.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
+  m_sharedMaterial: {fileID: -9050517108653397290, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4285361663
+  m_fontColor: {r: 1, g: 0.4292453, b: 0.4292453, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3455,8 +3459,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3491,7 +3495,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 166.9917, y: 29.242527, z: -256.26846, w: 0}
+  m_margin: {x: 166.9917, y: -25.789623, z: -233.79059, w: -25.578308}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
