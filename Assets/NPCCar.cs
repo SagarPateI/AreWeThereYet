@@ -9,10 +9,11 @@ public class NPCCar : MonoBehaviour
             Debug.Log("Player hit an NPC car!");
 
             PatienceMeter patienceMeter = other.GetComponent<PatienceMeter>();
-            if (patienceMeter != null)
-            {
+            //if (patienceMeter != null)
+            //{
+                Debug.Log("subtracted 5%!");
                 patienceMeter.DecreasePatienceByHit();
-            }
+            //}
         }
     }
 }

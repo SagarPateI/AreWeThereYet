@@ -430,9 +430,17 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1561639425127373367, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6345850668273254648, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
       propertyPath: m_Name
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345850668273254648, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
+      propertyPath: m_TagString
+      value: Hazard
       objectReference: {fileID: 0}
     - target: {fileID: 6345850668273254651, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
       propertyPath: m_RootOrder
@@ -478,7 +486,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 687694546992476516, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
 --- !u!1 &861042251
 GameObject:
@@ -587,6 +596,7 @@ MonoBehaviour:
   startingPatience: 1
   hitPenalty: 0.05
   stfuPenalty: 0.1
+  decreaseRate: 0.01
   switchPlayerScreen: {fileID: 0}
   scoreManager: {fileID: 1823165013}
 --- !u!1 &1152675380
@@ -1068,6 +1078,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6345850668273254650, guid: 278bd0786e3957c4c8c8cced1ca8ee31, type: 3}
+      propertyPath: patienceMeter
+      value: 
+      objectReference: {fileID: 861042251}
     - target: {fileID: 6345850668273254651, guid: 278bd0786e3957c4c8c8cced1ca8ee31, type: 3}
       propertyPath: m_RootOrder
       value: 0
