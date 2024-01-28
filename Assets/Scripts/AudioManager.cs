@@ -21,16 +21,12 @@ public class AudioManager : MonoBehaviour
 
     void MainTheme()
     {
-<<<<<<< Updated upstream
-        timer = timer - Time.deltaTime;
-=======
         if (timer == 0)
         {
             Opening.Stop();
             MainLoop.Play();
         }
         timer--;
->>>>>>> Stashed changes
     }
 
 
