@@ -4,12 +4,14 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class BabySitterLister : MonoBehaviour
 {
 
     public TMP_InputField input;
     private string sitterName;
+    public GameObject errorMessage;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,9 @@ public class BabySitterLister : MonoBehaviour
             File.Create(Application.dataPath + "/BabysitterList.txt");
         }
 
+        errorMessage.SetActive(false);
+
+
     }
 
     public void addName()
@@ -27,18 +32,22 @@ public class BabySitterLister : MonoBehaviour
         {
             sitterName = input.text;
             Debug.Log(sitterName);
-
             using (StreamWriter sw = new StreamWriter(Application.dataPath + "/BabysitterList.txt", true))
             {
 
                 sw.Write(sitterName);
                 sw.Close();
             }
+
+            SceneManager.LoadScene("TileTest");
+
+
         }
         else
         {
             Debug.Log("Error, name must be 10 characters or less");
             Debug.Log("This Error requires an actual Text object in Scene. WIll create once scene is decided");
+            errorMessage.SetActive(true);
         }
         
     }
