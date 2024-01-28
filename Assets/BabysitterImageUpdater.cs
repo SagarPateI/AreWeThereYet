@@ -20,22 +20,22 @@ public class BabysitterImageUpdater : MonoBehaviour
 
         if (patienceLevel <= 0.25f)
         {
-            babysitterImage.sprite = babysitterSprites[0]; 
+            babysitterImage.sprite = babysitterSprites[3]; 
             // Change image to the one representing 0-25% patience
         }
         else if (patienceLevel <= 0.5f)
         {
-            babysitterImage.sprite = babysitterSprites[1]; 
+            babysitterImage.sprite = babysitterSprites[2]; 
             // Change image to the one representing 25-50% patience
         }
         else if (patienceLevel <= 0.75f)
         {
-            babysitterImage.sprite = babysitterSprites[2]; 
+            babysitterImage.sprite = babysitterSprites[1]; 
             // Change image to the one representing 50-75% patience
         }
         else
         {
-            babysitterImage.sprite = babysitterSprites[3]; 
+            babysitterImage.sprite = babysitterSprites[0]; 
             // Change image to the one representing 75-100% patience
         }
     }
