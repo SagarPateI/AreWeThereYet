@@ -12,6 +12,8 @@ public class PatienceMeter : MonoBehaviour
     public GameObject switchPlayerScreen;
     private float targetProgress;
     public GameObject scoreManager;
+    public float wrongAnswerPenalty = 0.5f; // the penalty for selecting the wrong answer
+
 
     void Start()
     {
@@ -66,5 +68,13 @@ public class PatienceMeter : MonoBehaviour
     public bool isPatienceZero()
     {
         return targetProgress <= 0;
+    }
+
+    // decrease patience when the player selects the wrong answer
+    public void DecreasePatienceByWrongAnswer()
+    {
+        targetProgress -= wrongAnswerPenalty;
+        // update UI to reflect the change
+        UpdatePatienceUI();
     }
 }

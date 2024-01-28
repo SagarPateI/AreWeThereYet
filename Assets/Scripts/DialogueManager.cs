@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private float typingSpeed = 0.05f;
 
+    [SerializeField] private PatienceMeter patienceMeter;
+
     private List<dialogueString> dialogueList;
 
     [Header("Player")]
@@ -88,6 +90,12 @@ public class DialogueManager : MonoBehaviour
     {
         optionSelected = true;
         DisableButtons();
+
+        // check if the selected option is incorrect
+        if (indexJump == -1) // assuming -1 indicates an incorrect option
+        {
+            patienceMeter.DecreasePatienceByWrongAnswer(); // then you apply penalty to patience meter
+        }
 
         currentDialogueIndex = indexJump;
     }
