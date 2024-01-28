@@ -6,20 +6,21 @@ public class PatienceMeter : MonoBehaviour
 {
     private Slider slider;
     public float FillSpeed = 0.05f;
+    public float maxPatience = 1f;
+    public float startingPatience = 0f;
     public float hitPenalty = 0.2f;
     public float stfuPenalty = 0.1f;
     public float increaseRate = 0.01f; // Rate at which patience increases per second
     public GameObject scoreManager;
+    public GameObject distanceMeter;
     public float wrongAnswerPenalty = 0.5f; // Penalty for selecting the wrong answer
 
-    public float maxPatience = 1f;
-    public float startingPatience = 0f;
     public float targetProgress;
 
     void Start()
     {
-        targetProgress = maxPatience;
         slider = GetComponent<Slider>();
+        targetProgress = maxPatience;
         UpdatePatienceUI();
     }
 
@@ -34,8 +35,10 @@ public class PatienceMeter : MonoBehaviour
         {
             // Do something when patience is empty
             scoreManager.GetComponent<ScoreScript>().SaveScore();
+            distanceMeter.GetComponent<DistanceMeter>().SaveDistance();
             PlayerPrefs.DeleteKey("BabysitterName");
-            SceneManager.LoadScene("EnterNameAgain");
+
+            //SceneManager.LoadScene("EnterNameAgain");
         }
     }
 
