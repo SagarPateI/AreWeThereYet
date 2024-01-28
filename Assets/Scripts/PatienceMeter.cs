@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PatienceMeter : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PatienceMeter : MonoBehaviour
     public float hitPenalty = 0.2f;
     public float stfuPenalty = 0.1f;
     public float decreaseRate = 0.01f; // Rate at which patience decreases per second
-    public GameObject switchPlayerScreen;
+    //public GameObject switchPlayerScreen;
     private float targetProgress;
     public GameObject scoreManager;
     public float wrongAnswerPenalty = 0.5f; // the penalty for selecting the wrong answer
@@ -40,8 +41,11 @@ public class PatienceMeter : MonoBehaviour
         if (slider.value <= 0)
         {
             scoreManager.GetComponent<ScoreScript>().SaveScore();
-            switchPlayerScreen.SetActive(true);
+            //switchPlayerScreen.SetActive(true);
+
             // PAUSE THE GAME HERE AS WELL
+            PlayerPrefs.DeleteKey("BabysitterName");
+            SceneManager.LoadScene("EnterNameAgain");
         }
     }
 
