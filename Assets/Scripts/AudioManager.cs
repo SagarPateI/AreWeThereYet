@@ -8,14 +8,29 @@ public class AudioManager : MonoBehaviour
     public AudioListener listener;
     public AudioSource carHorn;
     public AudioSource carScreech;
+    public AudioSource MainLoop;
+    public AudioSource Opening;
+    public float timer = 17f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
+    public void FixedUpdate()
+    {
+        timer = timer - Time.deltaTime;
+        if(timer <= 0f)
+        {
+            MainLoop.Play();
+        }
+        else
+        {
+            Opening.Play();
+        }
+    }
     public void playCarHorn()
     {
         carHorn.Play();

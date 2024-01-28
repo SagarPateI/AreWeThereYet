@@ -66,7 +66,7 @@ public class CarSpawner : MonoBehaviour
                     }
 
                     // calculate position
-                    Vector3 spawnPosition = new Vector3(spawnx, yloc, 0);
+                    Vector3 spawnPosition = new Vector3(spawnx, yloc, -1);
                     // create new obstacle
                     GameObject newEnemy = Instantiate(NPC, spawnPosition, Quaternion.identity);
                 }
