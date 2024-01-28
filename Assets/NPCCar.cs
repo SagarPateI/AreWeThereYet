@@ -14,6 +14,7 @@ public class NPCCar: MonoBehaviour
     {
         patienceMeter = GameObject.Find("Patience Slider");
         patienceMeterCode = patienceMeter.GetComponent<PatienceMeter>();
+        audioManager = GameObject.Find("Audio Manager");
         audioScript = audioManager.GetComponent<AudioManager>();
     }
 
@@ -30,6 +31,7 @@ public class NPCCar: MonoBehaviour
                 Debug.Log("subtracted patience!");
                 patienceMeterCode.DecreasePatienceByHit();
             }
+            Destroy(gameObject);
         }
     }
 }

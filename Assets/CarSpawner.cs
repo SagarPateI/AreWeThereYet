@@ -15,7 +15,7 @@ public class CarSpawner : MonoBehaviour
     public Vector3 originpos;
     public Vector3 distbtwnen;
     public int enemiesperspawn;
-    public float spawntime = 5f;
+    public float spawntime = 1.5f;
     public float yloc;
     public float xloc;
     public GameObject Camera;
@@ -101,13 +101,13 @@ public class CarSpawner : MonoBehaviour
                     }
 
                     // calculate position
-                    Vector3 spawnPosition = new Vector3(spawnx, yloc, 0);
+                    Vector3 spawnPosition = new Vector3(spawnx, yloc, -1);
                     // create new obstacle
                     GameObject newEnemy = Instantiate(NPC, spawnPosition, Quaternion.identity);
                 }
             }
             Debug.Log("spawned");
-            spawntime = UnityEngine.Random.Range(1f, 1.5f);
+            spawntime = UnityEngine.Random.Range(.7f, 1f);
         }
     }
     public void Spawn()
