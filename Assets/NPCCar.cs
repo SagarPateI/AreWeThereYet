@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCCar : MonoBehaviour
@@ -9,6 +7,12 @@ public class NPCCar : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player hit an NPC car!");
+
+            PatienceMeter patienceMeter = other.GetComponent<PatienceMeter>();
+            if (patienceMeter != null)
+            {
+                patienceMeter.DecreasePatienceByHit();
+            }
         }
     }
 }
