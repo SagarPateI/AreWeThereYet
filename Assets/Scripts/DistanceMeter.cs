@@ -8,7 +8,7 @@ public class DistanceMeter : MonoBehaviour
     public float FillSpeed = 0.05f;
     public float startingDistance = 100f;
     public float decreaseRate = 0.1f;
-    private float targetDistance;
+    private static float targetDistance;
 
     void Start()
     {
