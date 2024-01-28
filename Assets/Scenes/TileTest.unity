@@ -599,6 +599,7 @@ MonoBehaviour:
   decreaseRate: 0.01
   switchPlayerScreen: {fileID: 0}
   scoreManager: {fileID: 1823165013}
+  wrongAnswerPenalty: 0.5
 --- !u!1 &1152675380
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +962,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3154845525329978731, guid: 8753897c927d6d8449db27bbc37ce6d9, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7166270711348962597, guid: 8753897c927d6d8449db27bbc37ce6d9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1125,6 +1130,10 @@ PrefabInstance:
     - target: {fileID: 6345850668273254651, guid: 278bd0786e3957c4c8c8cced1ca8ee31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969802555396642353, guid: 278bd0786e3957c4c8c8cced1ca8ee31, type: 3}
+      propertyPath: m_Constraints
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6345850667848901067, guid: 278bd0786e3957c4c8c8cced1ca8ee31, type: 3}
