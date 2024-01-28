@@ -266,6 +266,7 @@ MonoBehaviour:
   option2Button: {fileID: 751419555}
   typingSpeed: 0.05
   patienceMeter: {fileID: 0}
+  dialogueTriggerObject: {fileID: 0}
 --- !u!1 &92567360
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +709,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -344479853
   m_SortingLayer: 1
-  m_SortingOrder: 6
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 114265614d117c4479c97b51fcf00085, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1810,10 +1811,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a882b58919843478e6baf14f06fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FillSpeed: 0.25
+  FillSpeed: 0.05
   maxPatience: 1
   startingPatience: 1
-  hitPenalty: 0.1
+  hitPenalty: 0.2
   stfuPenalty: 0.1
   increaseRate: 0.01
   scoreManager: {fileID: 1823165013}
@@ -2352,9 +2353,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BabySitterLister, Assembly-CSharp
-        m_MethodName: addName
+      - m_Target: {fileID: 41572276}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: ShutUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
