@@ -93,4 +93,13 @@ public class DistanceMeter : MonoBehaviour
             sw.Close();
         }
     }
+
+    private void OnApplicationQuit()
+    {
+        using (StreamWriter sw = new StreamWriter(Application.dataPath + "/distanceTracker.txt"))
+        {
+            sw.WriteLine(100);
+            sw.Close();
+        }
+    }
 }

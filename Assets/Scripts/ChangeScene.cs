@@ -21,6 +21,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene("StartMenuScene");
     }
 
+    public void LoadNameScene()
+    {
+        SceneManager.LoadScene("EnterNameScene");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
