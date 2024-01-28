@@ -333,12 +333,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Left Arrow Key - Moves car to the left lanes
+  m_text: 'Z - Starts the Car
 
-    Right Arrow Key - Moves
-    car to the right lanes
+    Left Arrow Key - Moves car to the left lanes
 
-    Left Click - Confirms answer on the highlighted button'
+    Right
+    Arrow Key - Moves car to the right lanes
+
+    Left Click - Confirms answer on
+    the highlighted button'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
   m_sharedMaterial: {fileID: -9050517108653397290, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
