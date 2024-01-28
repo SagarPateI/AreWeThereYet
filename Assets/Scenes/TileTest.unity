@@ -2124,10 +2124,10 @@ MonoBehaviour:
   stfuPenalty: 0.1
   increaseRate: 0.01
   scoreManager: {fileID: 1823165013}
-  distanceMeter: {fileID: 0}
+  distanceMeter: {fileID: 1925890337}
   wrongAnswerPenalty: 0.5
   targetProgress: 0
-  camController: {fileID: 0}
+  camController: {fileID: 496027627}
 --- !u!114 &740320924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3451,7 +3451,7 @@ MonoBehaviour:
   FillSpeed: 0.05
   startingDistance: 50
   decreaseRate: 0.5
-  camController: {fileID: 0}
+  camController: {fileID: 496027627}
 --- !u!114 &1925890340
 MonoBehaviour:
   m_ObjectHideFlags: 0
