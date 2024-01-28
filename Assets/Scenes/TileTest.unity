@@ -1421,7 +1421,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 496027630}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1230567563
 MonoBehaviour:
@@ -1435,6 +1435,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f7c070ae8634a4196599465f5929e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  primary: {fileID: 0}
+  randObj: 0
+  NPC: {fileID: 6345850668273254648, guid: f17503399f6ac404eaf6b9941f9ac636, type: 3}
+  x: 0
+  y: 0
+  originpos: {x: 0, y: 0, z: 0}
+  distbtwnen: {x: 0, y: 0, z: 0}
+  enemiesperspawn: 0
+  spawntime: 5
+  yloc: 0
+  xloc: 0
+  Camera: {fileID: 0}
 --- !u!1 &1332996124
 GameObject:
   m_ObjectHideFlags: 0

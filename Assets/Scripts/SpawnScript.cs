@@ -34,14 +34,15 @@ public class SpawnScript : MonoBehaviour
                 Object.Instantiate(camscript.Back2, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
                 camscript.roadstate = 2;
             }
-            else if (randomizer == 1 && roadstate == 2)
+            else if (randomizer == 1 && roadstate == 3)
             {
                 Object.Instantiate(camscript.Back4, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
                 camscript.roadstate = 1;
             }
-            else if (roadstate == 2)
+            else if (roadstate == 2 || roadstate == 3)
             {
                 Object.Instantiate(camscript.Back3, new Vector3(0, spawnlocation.position.y + 36, 0), transform.rotation);
+                camscript.roadstate = 3;
             }
             else
             {

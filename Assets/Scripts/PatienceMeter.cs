@@ -30,7 +30,7 @@ public class PatienceMeter : MonoBehaviour
         slider.value = Mathf.Lerp(slider.value, targetProgress / maxPatience, FillSpeed * Time.deltaTime);
 
         // Check if patience has reached zero
-        if (targetProgress <= startingPatience)
+        if (targetProgress < startingPatience)
         {
             // Do something when patience is empty
             scoreManager.GetComponent<ScoreScript>().SaveScore();
