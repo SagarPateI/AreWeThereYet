@@ -70,7 +70,7 @@ public class PatienceMeter : MonoBehaviour
     // Returns true/false depending on if patience is empty or not
     public bool IsPatienceEmpty()
     {
-        return targetProgress <= startingPatience;
+        return targetProgress <= 0;
     }
 
     // Decrease patience when the player selects the wrong answer
