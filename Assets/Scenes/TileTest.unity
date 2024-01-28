@@ -1970,7 +1970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patienceMeter: {fileID: 861042251}
-  camController: {fileID: 0}
+  camController: {fileID: 496027627}
 --- !u!4 &1823165015
 Transform:
   m_ObjectHideFlags: 0
