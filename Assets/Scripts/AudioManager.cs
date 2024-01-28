@@ -6,7 +6,9 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public AudioListener listener;
-    public AudioSource sound1;
+    public AudioSource carHorn;
+    public AudioSource carScreech;
+
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +16,12 @@ public class AudioManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void playCarHorn()
     {
-        
+        carHorn.Play();
+    }
+    public void playCarScreech()
+    {
+        carScreech.Play();
     }
 }

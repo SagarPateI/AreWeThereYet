@@ -9,38 +9,33 @@ public class ScoreScript : MonoBehaviour
     private PatienceMeter patienceScript;
     private float score;
 
-    // Start is called before the first frame update
     void Start()
     {
         score = 0;
         patienceScript = patienceMeter.GetComponent<PatienceMeter>();
-        InvokeRepeating("ScoreTracker", 0f,  1f);
+        InvokeRepeating("ScoreTracker", 0f, 1f);
     }
 
     void ScoreTracker()
     {
-        if (!patienceScript.isPatienceZero())
+        if (patienceMeter != null && patienceScript.IsPatienceEmpty())
         {
             score++;
+            Debug.Log(score);
         }
-        Debug.Log(score);
     }
 
     public void SaveScore()
     {
         using (StreamWriter sw = new StreamWriter(Application.dataPath + "/BabysitterList.txt", true))
         {
-
             sw.Write("\t" + score + "\n");
             sw.Close();
         }
     }
 
-
     public float getScore()
     {
         return score;
     }
-
-   
 }

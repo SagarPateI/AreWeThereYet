@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3832644646281543657}
   m_Layer: 0
   m_Name: NPC
-  m_TagString: Player
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patienceMeter: {fileID: 0}
   speed: 5
+  audioManager: {fileID: 0}

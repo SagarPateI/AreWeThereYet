@@ -7,15 +7,13 @@ public class NPCCar: MonoBehaviour
     public GameObject patienceMeter;
     private PatienceMeter patienceMeterCode;
     public float speed = 5f;
+    public GameObject audioManager;
+    private AudioManager audioScript;
 
     void Start()
     {
         patienceMeterCode = patienceMeter.GetComponent<PatienceMeter>();
-    }
-
-    void FixedUpdate()
-    {
-
+        audioScript = audioManager.GetComponent<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +21,8 @@ public class NPCCar: MonoBehaviour
         if (other.tag == ("Player"))
         {
             Debug.Log("Player hit an NPC car!");
+            audioScript.playCarHorn();
+            audioScript.playCarScreech();
 
             if (patienceMeter != null)
             {

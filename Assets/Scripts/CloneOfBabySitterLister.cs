@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class BabySitterLister : MonoBehaviour
+public class CloneOfBabySitterLister : MonoBehaviour
 {
 
     public TMP_InputField input;
@@ -23,13 +23,6 @@ public class BabySitterLister : MonoBehaviour
 
         errorMessage.SetActive(false);
 
-        // check if there is a previous babysitter name stored in PlayerPrefs
-        if (PlayerPrefs.HasKey("BabysitterName"))
-        {
-            // if there is, then load main scene
-            SceneManager.LoadScene("TileTest");
-        }
-
 
     }
 
@@ -45,9 +38,7 @@ public class BabySitterLister : MonoBehaviour
                 sw.Write(sitterName);
                 sw.Close();
             }
-            
-            // save the babysitter's name to PlayerPrefs
-            PlayerPrefs.SetString("BabysitterName", sitterName);
+
             SceneManager.LoadScene("TileTest");
 
 
