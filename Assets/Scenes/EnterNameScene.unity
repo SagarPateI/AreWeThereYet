@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 1935486756}
-  errorMessage: {fileID: 0}
+  errorMessage: {fileID: 1082635220}
 --- !u!4 &1028580741
 Transform:
   m_ObjectHideFlags: 0
