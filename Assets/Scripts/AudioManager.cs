@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("MainTheme", 0f, 17f);
+        InvokeRepeating("MainTheme", 0f, 1f);
     }
 
     void MainTheme()
@@ -25,6 +25,8 @@ public class AudioManager : MonoBehaviour
         {
             Opening.Stop();
             MainLoop.Play();
+            MainLoop.mute = false;
+            
         }
         timer--;
     }
