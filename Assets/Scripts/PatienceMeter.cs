@@ -6,7 +6,7 @@ public class PatienceMeter : MonoBehaviour
     private Slider slider;
     public float FillSpeed = 0.05f;
     public float startingPatience = 1f;
-    public float hitPenalty = 0.05f;
+    public float hitPenalty = 0.2f;
     public float stfuPenalty = 0.1f;
     public float decreaseRate = 0.01f; // Rate at which patience decreases per second
     public GameObject switchPlayerScreen;
