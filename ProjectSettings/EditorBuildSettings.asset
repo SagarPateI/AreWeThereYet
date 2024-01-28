@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TileTest.unity
     guid: 520c3d5d75c2d894f99d22d87caa20a2
   - enabled: 1
-    path: Assets/Scenes/TryAgainScene.unity
+    path: Assets/Scenes/ScoreScreen.unity
     guid: f35cba294395f1e46a19b0aea99eef0c
   - enabled: 1
     path: Assets/Scenes/EnterNameScene.unity
