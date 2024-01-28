@@ -340,15 +340,15 @@ MonoBehaviour:
 
     Left Click - Confirms answer on the highlighted button'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
+  m_sharedMaterial: {fileID: -9050517108653397290, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287031039
+  m_fontColor: {r: 1, g: 0.9006639, b: 0.5235849, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -705,15 +705,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Controls
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
+  m_sharedMaterial: {fileID: -9050517108653397290, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288651186
-  m_fontColor: {r: 0.6981132, g: 0.62237453, b: 0.62237453, a: 1}
+    rgba: 4281166847
+  m_fontColor: {r: 1, g: 0.41980627, b: 0.1745283, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
