@@ -8,7 +8,7 @@ public class PatienceMeter : MonoBehaviour
     public float FillSpeed = 0.05f;
     public float maxPatience = 1f;
     public float startingPatience = 0f;
-    public float hitPenalty = 0.2f;
+    public float hitPenalty = 0.1f;
     public float stfuPenalty = 0.1f;
     public float increaseRate = 0.01f; // Rate at which patience increases per second
     public GameObject scoreManager;

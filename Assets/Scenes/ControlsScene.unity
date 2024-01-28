@@ -310,7 +310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -7}
+  m_AnchoredPosition: {x: 0, y: 18.2}
   m_SizeDelta: {x: 200, y: 123.3252}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883852783
@@ -341,7 +341,10 @@ MonoBehaviour:
     Arrow Key - Moves car to the right lanes
 
     Left Click - Confirms answer on
-    the highlighted button'
+    the highlighted button
+
+    When you run out of patience, find someone to be
+    a new babysitter!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
   m_sharedMaterial: {fileID: -9050517108653397290, guid: a688c5c58b439e440b2bb68adc94170a, type: 2}
@@ -552,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000076294, y: -117}
+  m_AnchoredPosition: {x: -0.0000076294, y: -140}
   m_SizeDelta: {x: 78.2751, y: 23.0139}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129286769
