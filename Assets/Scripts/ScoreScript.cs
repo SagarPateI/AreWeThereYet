@@ -13,6 +13,7 @@ public class ScoreScript : MonoBehaviour
 
     void Start()
     {
+        camController = GameObject.Find("Main Camera");
         score = 0;
         patienceScript = patienceMeter.GetComponent<PatienceMeter>();
         InvokeRepeating("ScoreTracker", 0f, 1f);

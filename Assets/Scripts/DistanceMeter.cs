@@ -17,6 +17,7 @@ public class DistanceMeter : MonoBehaviour
 
     void Start()
     {
+        camController = GameObject.Find("Main Camera");
         slider = GetComponent<Slider>();
         if (!File.Exists(Application.dataPath + "/distanceTracker.txt"))
         {
