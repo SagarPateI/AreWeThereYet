@@ -22,14 +22,6 @@ public class AudioManager : MonoBehaviour
     public void FixedUpdate()
     {
         timer = timer - Time.deltaTime;
-        if(timer <= 0f)
-        {
-            MainLoop.Play();
-        }
-        else
-        {
-            Opening.Play();
-        }
     }
     public void playCarHorn()
     {
