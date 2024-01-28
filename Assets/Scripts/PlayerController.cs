@@ -5,21 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
-    private Rigidbody2D playerRB;
     public GameObject patienceMeter;
     private PatienceMeter patienceMeterCode;
 
     void Start()
     {
-        playerRB = GetComponent<Rigidbody2D>();
         patienceMeterCode = patienceMeter.GetComponent<PatienceMeter>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        Vector2 movement = new Vector2(moveHorizontal, 0f).normalized;
-        playerRB.velocity = movement * speed;
+        float rightleft = 0;
+        if (Input.GetKey(KeyCode.LeftArrow)) rightleft += -1;
+        if (Input.GetKey(KeyCode.RightArrow)) rightleft += 1;
+        rightleft *= speed;
+        rightleft *= Time.deltaTime;
+        transform.Translate(rightleft, 0, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
