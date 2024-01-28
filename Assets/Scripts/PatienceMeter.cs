@@ -14,23 +14,23 @@ public class PatienceMeter : MonoBehaviour
     public GameObject scoreManager;
     public float wrongAnswerPenalty = 0.5f; // Penalty for selecting the wrong answer
 
-    private float targetProgress;
+    public float targetProgress;
 
     void Start()
     {
         slider = GetComponent<Slider>();
-        targetProgress = startingPatience;
+        targetProgress = maxPatience;
         UpdatePatienceUI();
     }
 
     void Update()
     {
-        targetProgress -= increaseRate * Time.deltaTime;
         targetProgress = Mathf.Clamp(targetProgress, startingPatience, maxPatience);
+        targetProgress -= increaseRate * Time.deltaTime;
         slider.value = Mathf.Lerp(slider.value, targetProgress / maxPatience, FillSpeed * Time.deltaTime);
 
         // Check if patience has reached zero
-        if (targetProgress < startingPatience)
+        if (targetProgress <= startingPatience)
         {
             // Do something when patience is empty
             scoreManager.GetComponent<ScoreScript>().SaveScore();
