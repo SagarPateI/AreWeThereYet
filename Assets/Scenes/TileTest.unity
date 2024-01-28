@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5a882b58919843478e6baf14f06fb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FillSpeed: 0.25
+  FillSpeed: 0.1
   maxPatience: 1
   startingPatience: 0
   hitPenalty: 0.1
