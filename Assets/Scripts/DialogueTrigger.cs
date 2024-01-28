@@ -9,8 +9,8 @@ public class DialogueTrigger : MonoBehaviour
     public WaitForSeconds waitTime = new WaitForSeconds(1f);
     private int timer = 3;
     private int randomNum;
-    [SerializeField] private List<dialogueString> dialogueStrings = new List<dialogueString>();
-    [SerializeField] private List<dialogueString> dialogueStrings2 = new List<dialogueString>();
+    [SerializeField] public List<dialogueString> dialogueStrings = new List<dialogueString>();
+    [SerializeField] public List<dialogueString> dialogueStrings2 = new List<dialogueString>();
 
     void Start()
     {

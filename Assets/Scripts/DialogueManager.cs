@@ -16,15 +16,34 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private PatienceMeter patienceMeter;
 
+    private int timer = 3;
+    private int randomNum;
+    public WaitForSeconds waitTime = new WaitForSeconds(1f);
+
     private List<dialogueString> dialogueList;
 
     [Header("Player")]
 
     private int currentDialogueIndex = 0;
 
+    public GameObject dialogueTriggerObject;
+    List<dialogueString> list1;
+    List<dialogueString> list2;
+
+    // Reference to the DialogueManager script
+    private DialogueTrigger dialogueTrigger;
+
     private void Start()
     {
         dialogueParent.SetActive(false);
+        dialogueTriggerObject = GameObject.Find("DialogueManager");
+
+        // Get the DialogueManager component from the GameObject
+        dialogueTrigger = dialogueTriggerObject.GetComponent<DialogueTrigger>();
+
+        // Now you can access the lists from the DialogueManager
+        list1 = dialogueTrigger.dialogueStrings;
+        list2 = dialogueTrigger.dialogueStrings2;
     }
 
     public void DialogueStart(List<dialogueString> textToPrint)
@@ -131,4 +150,35 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    public void ShutUp()
+    {
+        Debug.Log("Shut Up Pressed");
+        DialogueStop();
+        patienceMeter.DecreasePatienceBySTFU();
+        int randomNum = Random.Range(0, 2);
+        StartCoroutine(Countdown());
+        
+    }
+
+    IEnumerator Countdown()
+    {
+        while (timer > 0)
+        {
+            yield return waitTime;
+            timer--;
+        }
+
+
+        if (randomNum == 1)
+        {
+           DialogueStart(list1);
+        }
+
+        else
+        {
+           DialogueStart(list2);
+        }
+
+    }
 }
+
