@@ -169,24 +169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueStrings:
-  - text: blablabla?
+  - text: Are you married? To who?!
     isEnd: 0
     isQuestion: 1
-    answerOption1: Yes
-    answerOption2: No
-    option1IndexJump: 1
-    option2IndexJump: 2
-    startDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    endDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-  - text: Yea
-    isEnd: 1
-    isQuestion: 0
-    answerOption1: 
-    answerOption2: 
+    answerOption1: Someone I really care about.
+    answerOption2: Your Mom.
     option1IndexJump: 0
     option2IndexJump: 0
     startDialogueEvent:
@@ -195,7 +182,7 @@ MonoBehaviour:
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Nope
+  - text: 
     isEnd: 1
     isQuestion: 0
     answerOption1: 
@@ -209,20 +196,20 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   dialogueStrings2:
-  - text: blablabla!
+  - text: Are you rich? Then go buy me a happy meal, okay?
     isEnd: 0
     isQuestion: 1
-    answerOption1: Yea!
+    answerOption1: Fine...
     answerOption2: No!
-    option1IndexJump: 1
-    option2IndexJump: 2
+    option1IndexJump: 0
+    option2IndexJump: 0
     startDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Yea!
+  - text: 
     isEnd: 1
     isQuestion: 0
     answerOption1: 
@@ -235,8 +222,143 @@ MonoBehaviour:
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: No!
+  dialogueStrings3:
+  - text: Are we there yet?
     isEnd: 0
+    isQuestion: 1
+    answerOption1: Yea!
+    answerOption2: Nope!
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: 
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  dialogueStrings4:
+  - text: My mom said single people are lonely. Is this true?
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: Yes, they're very very lonely.
+    answerOption2: No, that's a lie!
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: 
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  dialogueStrings5:
+  - text: Cat or dog?
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: Cat!
+    answerOption2: Dog!
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: 
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  dialogueStrings6:
+  - text: Favorite Color?
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: A color!
+    answerOption2: Shut up!
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: Favorite Color?
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: A color!
+    answerOption2: Shut up!
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: 
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  dialogueStrings7:
+  - text: Can we go to McDonalds?
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: No!
+    answerOption2: We'll go next time.
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: 
+    isEnd: 1
     isQuestion: 0
     answerOption1: 
     answerOption2: 
@@ -1821,6 +1943,7 @@ MonoBehaviour:
   stfuPenalty: 0.1
   increaseRate: 0.01
   scoreManager: {fileID: 1823165013}
+  distanceMeter: {fileID: 0}
   wrongAnswerPenalty: 0.5
   targetProgress: 0
 --- !u!1 &940225678
@@ -2064,6 +2187,7 @@ MonoBehaviour:
   FillSpeed: 0.05
   startingDistance: 50
   decreaseRate: 0.1
+  camController: {fileID: 0}
 --- !u!1 &1152675380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2902,7 +3026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.1195984, y: 2.2392998}
+  m_AnchoredPosition: {x: 1.1195984, y: 2.2393036}
   m_SizeDelta: {x: 2.2393, y: -4.4787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1712568243
@@ -3032,6 +3156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patienceMeter: {fileID: 861042251}
+  camController: {fileID: 0}
 --- !u!4 &1823165015
 Transform:
   m_ObjectHideFlags: 0

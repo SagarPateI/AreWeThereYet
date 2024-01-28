@@ -11,8 +11,19 @@ public class DialogueTrigger : MonoBehaviour
     private int randomNum;
     [SerializeField] public List<dialogueString> dialogueStrings = new List<dialogueString>();
     [SerializeField] public List<dialogueString> dialogueStrings2 = new List<dialogueString>();
+    [SerializeField] public List<dialogueString> dialogueStrings3 = new List<dialogueString>();
+    [SerializeField] public List<dialogueString> dialogueStrings4 = new List<dialogueString>();
+    [SerializeField] public List<dialogueString> dialogueStrings5 = new List<dialogueString>();
+    [SerializeField] public List<dialogueString> dialogueStrings6 = new List<dialogueString>();
+    [SerializeField] public List<dialogueString> dialogueStrings7 = new List<dialogueString>();
 
     void Start()
+    {
+
+
+    }
+
+    void Update()
     {
         StartCoroutine(Countdown());
         randomNum = Random.Range(0, 2);
@@ -20,11 +31,17 @@ public class DialogueTrigger : MonoBehaviour
 
     IEnumerator Countdown()
     {
-        while (timer > 0)
+        while (true)
+        {
+            yield return new WaitForSeconds(3f);
+            StartCoroutine(Countdown());
+        }
+
+        /*while (timer > 0)
         {
             yield return waitTime;
             timer--;
-        }
+        }*/
 
 
         if (randomNum == 1)
