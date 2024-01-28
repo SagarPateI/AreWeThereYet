@@ -150,7 +150,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void ShutUp()
+    /*public void ShutUp()
     {
         Debug.Log("Shut Up Pressed");
         DialogueStop();
@@ -158,7 +158,7 @@ public class DialogueManager : MonoBehaviour
         int randomNum = Random.Range(0, 2);
         StartCoroutine(Countdown());
         
-    }
+    }*/
 
     IEnumerator Countdown()
     {
