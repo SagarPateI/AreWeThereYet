@@ -49,7 +49,7 @@ public class PatienceMeter : MonoBehaviour
         }
     }
 
-    // Decrease patience when the car hits an object
+    // decrease the patience when the car hits an object
     public void DecreasePatienceByHit()
     {
         targetProgress -= hitPenalty;
