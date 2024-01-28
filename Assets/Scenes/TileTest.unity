@@ -1105,6 +1105,7 @@ MonoBehaviour:
   distanceMeter: {fileID: 1122705728}
   wrongAnswerPenalty: 0.5
   targetProgress: 0
+  camController: {fileID: 0}
 --- !u!1 &1122705728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1193,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.467
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1210,8 +1211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FillSpeed: 0.05
   startingDistance: 50
-  decreaseRate: 0.1
-  camController: {fileID: 496027627}
+  decreaseRate: 0.5
+  camController: {fileID: 0}
 --- !u!1 &1152675380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,7 +1970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patienceMeter: {fileID: 861042251}
-  camController: {fileID: 496027627}
+  camController: {fileID: 0}
 --- !u!4 &1823165015
 Transform:
   m_ObjectHideFlags: 0
