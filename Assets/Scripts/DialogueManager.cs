@@ -29,7 +29,11 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueTriggerObject;
     List<dialogueString> list1;
     List<dialogueString> list2;
-
+    List<dialogueString> list3;
+    List<dialogueString> list4;
+    List<dialogueString> list5;
+    List<dialogueString> list6;
+    List<dialogueString> list7;
     // Reference to the DialogueManager script
     private DialogueTrigger dialogueTrigger;
 
@@ -44,6 +48,11 @@ public class DialogueManager : MonoBehaviour
         // Now you can access the lists from the DialogueManager
         list1 = dialogueTrigger.dialogueStrings;
         list2 = dialogueTrigger.dialogueStrings2;
+        list3 = dialogueTrigger.dialogueStrings3;
+        list4 = dialogueTrigger.dialogueStrings4;
+        list5 = dialogueTrigger.dialogueStrings5;
+        list6 = dialogueTrigger.dialogueStrings6;
+        list7 = dialogueTrigger.dialogueStrings7;
     }
 
     public void DialogueStart(List<dialogueString> textToPrint)
@@ -150,18 +159,19 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    /*public void ShutUp()
+   /* public void ShutUp()
     {
         Debug.Log("Shut Up Pressed");
         DialogueStop();
-        patienceMeter.DecreasePatienceBySTFU();
-        int randomNum = Random.Range(0, 2);
+        patienceMeter.Decreate
         StartCoroutine(Countdown());
-        
+        int randomNum = Random.Range(0, 2);
     }*/
 
     IEnumerator Countdown()
     {
+        int randomNum = Random.Range(0, 7);
+
         while (timer > 0)
         {
             yield return waitTime;
@@ -169,15 +179,41 @@ public class DialogueManager : MonoBehaviour
         }
 
 
-        if (randomNum == 1)
+        if (randomNum == 0)
         {
            DialogueStart(list1);
         }
 
-        else
+        if(randomNum == 1)
         {
-           DialogueStart(list2);
+            DialogueStart(list2);
         }
+
+        if (randomNum == 2)
+        {
+            DialogueStart(list3);
+        }
+
+        if (randomNum == 3)
+        {
+            DialogueStart(list4);
+        }
+
+        if (randomNum == 4)
+        {
+            DialogueStart(list5);
+        }
+
+        if (randomNum == 5)
+        {
+            DialogueStart(list6);
+        }
+
+        if (randomNum == 6)
+        {
+            DialogueStart(list7);
+        }
+
 
     }
 }

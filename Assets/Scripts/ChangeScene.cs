@@ -1,4 +1,5 @@
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -24,6 +25,11 @@ public class ChangeScene : MonoBehaviour
     public void LoadNameScene()
     {
         SceneManager.LoadScene("EnterNameScene");
+        using (StreamWriter sw = new StreamWriter(Application.dataPath + "/BabysitterList.txt"))
+        {
+            sw.Write("");
+            sw.Close();
+        }
     }
 
     public void QuitGame()
