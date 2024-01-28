@@ -12,6 +12,7 @@ public class NPCCar: MonoBehaviour
 
     void Start()
     {
+        patienceMeter = GameObject.Find("Patience Slider");
         patienceMeterCode = patienceMeter.GetComponent<PatienceMeter>();
         audioScript = audioManager.GetComponent<AudioManager>();
     }

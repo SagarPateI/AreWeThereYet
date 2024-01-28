@@ -20,6 +20,7 @@ public class CarSpawner : MonoBehaviour
     public float xloc;
     public GameObject Camera;
     float spawnx;
+    bool didstart;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +31,17 @@ public class CarSpawner : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        didstart = camscript.didstart;
         roadstate = camscript.roadstate;
         originpos = transform.position;
         xloc = transform.position.x;
         yloc = transform.position.y;
         originpos = transform.position;
         enemiesperspawn = UnityEngine.Random.Range(0, 3);
-        spawntime = spawntime - Time.deltaTime;
+        if(didstart == true)
+        {
+            spawntime = spawntime - Time.deltaTime;
+        }
         if (spawntime <= 0f)
         {
             if(roadstate == 1)
@@ -102,7 +107,7 @@ public class CarSpawner : MonoBehaviour
                 }
             }
             Debug.Log("spawned");
-            spawntime = UnityEngine.Random.Range(.3f, 1.5f);
+            spawntime = UnityEngine.Random.Range(1f, 1.5f);
         }
     }
     public void Spawn()

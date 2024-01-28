@@ -349,7 +349,7 @@ MonoBehaviour:
   Back4: {fileID: 5074357844917277597, guid: c299380683f5d6844bfe51d437c498a3, type: 3}
   roadstate: 1
   ms: 5
-  didstart: 1
+  didstart: 0
 --- !u!1 &532725001
 GameObject:
   m_ObjectHideFlags: 0
