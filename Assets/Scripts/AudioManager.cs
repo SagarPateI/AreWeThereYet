@@ -16,13 +16,24 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        InvokeRepeating("MainTheme", 0f, 17f);
     }
 
-    public void FixedUpdate()
+    void MainTheme()
     {
+<<<<<<< Updated upstream
         timer = timer - Time.deltaTime;
+=======
+        if (timer == 0)
+        {
+            Opening.Stop();
+            MainLoop.Play();
+        }
+        timer--;
+>>>>>>> Stashed changes
     }
+
+
     public void playCarHorn()
     {
         carHorn.Play();

@@ -12,6 +12,7 @@ public class PatienceMeter : MonoBehaviour
     public float stfuPenalty = 0.1f;
     public float increaseRate = 0.01f; // Rate at which patience increases per second
     public GameObject scoreManager;
+    public GameObject distanceMeter;
     public float wrongAnswerPenalty = 0.5f; // Penalty for selecting the wrong answer
 
     public float targetProgress;
@@ -34,7 +35,9 @@ public class PatienceMeter : MonoBehaviour
         {
             // Do something when patience is empty
             scoreManager.GetComponent<ScoreScript>().SaveScore();
+            distanceMeter.GetComponent<DistanceMeter>().SaveDistance();
             PlayerPrefs.DeleteKey("BabysitterName");
+
             //SceneManager.LoadScene("EnterNameAgain");
         }
     }

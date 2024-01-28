@@ -6,8 +6,10 @@ using UnityEngine;
 public class ScoreScript : MonoBehaviour
 {
     public GameObject patienceMeter;
+    public GameObject camController;
     private PatienceMeter patienceScript;
     private float score;
+    bool started = false;
 
     void Start()
     {
@@ -18,15 +20,25 @@ public class ScoreScript : MonoBehaviour
 
     void ScoreTracker()
     {
-        if (patienceMeter != null && patienceScript.IsPatienceEmpty())
+        
+        if (camController.GetComponent<CamControl>().didstart)
         {
-            score++;
-            Debug.Log(score);
+            started = true;
+        }
+
+        if (started)
+        {
+            if (patienceMeter != null && patienceScript.IsPatienceEmpty())
+            {
+                score++;
+                Debug.Log(score);
+            }
         }
     }
 
     public void SaveScore()
     {
+        
         using (StreamWriter sw = new StreamWriter(Application.dataPath + "/BabysitterList.txt", true))
         {
             sw.Write("\t" + score + "\n");
