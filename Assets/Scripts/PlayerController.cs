@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
+    public Rigidbody2D playerRB;
     public GameObject patienceMeter;
     private PatienceMeter patienceMeterCode;
 
@@ -15,12 +16,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float rightleft = 0;
-        if (Input.GetKey(KeyCode.LeftArrow)) rightleft += -1;
-        if (Input.GetKey(KeyCode.RightArrow)) rightleft += 1;
-        rightleft *= speed;
-        rightleft *= Time.deltaTime;
-        transform.Translate(rightleft, 0, 0);
+        playerRB.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

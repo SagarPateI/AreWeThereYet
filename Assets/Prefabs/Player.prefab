@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  playerRB: {fileID: 6969802555396642353}
   patienceMeter: {fileID: 0}
 --- !u!61 &6051317158525969969
 BoxCollider2D:
