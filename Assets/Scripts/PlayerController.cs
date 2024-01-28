@@ -16,8 +16,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftArrow)) rightleft += -1 * speed;
-        if (Input.GetKey(KeyCode.RightArrow)) rightleft += 1 * speed;
+        if (Input.GetKey(KeyCode.LeftArrow)) rightleft = -speed;
+        else if (Input.GetKey(KeyCode.RightArrow)) rightleft = speed;
+        else rightleft = 0;
         rightleft *= Time.deltaTime;
         Vector3 pMove = new Vector3(rightleft, 0, 0);
         playerRB.MovePosition(transform.position + pMove);
