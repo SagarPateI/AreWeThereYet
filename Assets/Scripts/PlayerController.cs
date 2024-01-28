@@ -28,13 +28,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Player hit an NPC car!");
 
-            //if (patienceMeter != null)
-            //{
-            Debug.Log("subtracted 5%!");
-            patienceMeterCode.DecreasePatienceByHit();
-            //}
+            if (patienceMeter != null)
+            {
+                Debug.Log("subtracted 5%!");
+                patienceMeterCode.DecreasePatienceByHit();
+            }
         }
     }
 }
-
-//if (collision.gameObject.tag == "MyTag")
