@@ -35,7 +35,7 @@ public class PatienceMeter : MonoBehaviour
             // Do something when patience is empty
             scoreManager.GetComponent<ScoreScript>().SaveScore();
             PlayerPrefs.DeleteKey("BabysitterName");
-            SceneManager.LoadScene("EnterNameAgain");
+            //SceneManager.LoadScene("EnterNameAgain");
         }
     }
 
